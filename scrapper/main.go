@@ -103,7 +103,7 @@ func scrapper() {
 }
 
 func main() {
-	gocron.Every(1).Minutes().Do(scrapper)
+	gocron.Every(10).Minutes().Do(scrapper)
 
 	<-gocron.Start()
 }
