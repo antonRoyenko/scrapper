@@ -3,6 +3,7 @@ module scrapper
 go 1.18
 
 require (
+	github.com/jasonlvhit/gocron v0.0.1 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/n0madic/twitter-scraper v0.0.0-20230507144601-fb7a0065f4ec // indirect

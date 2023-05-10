@@ -6,12 +6,13 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/jasonlvhit/gocron"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	twitterscraper "github.com/n0madic/twitter-scraper"
 )
 
-func main() {
+func scrapper() {
 	scraper := twitterscraper.New()
 	tweet_text := ""
 
@@ -92,4 +93,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+}
+
+func main() {
+	gocron.Every(10).Minutes().Do(scrapper)
+
+	<-gocron.Start()
 }
