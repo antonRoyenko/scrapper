@@ -1,1 +1,1 @@
-web: scrapper/main.go
+web: scrapper
